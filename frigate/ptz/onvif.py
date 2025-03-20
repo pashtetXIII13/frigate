@@ -394,7 +394,7 @@ class OnvifController:
     def _move_relative(self, camera_name: str, pan, tilt, zoom, speed) -> None:
         if "pt-r-fov" not in self.cams[camera_name]["features"]:
             logger.error(f"{camera_name} does not support ONVIF RelativeMove (FOV).")
-            return
+           # return
 
         logger.debug(
             f"{camera_name} called RelativeMove: pan: {pan} tilt: {tilt} zoom: {zoom}"
